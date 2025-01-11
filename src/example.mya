@@ -1,0 +1,29 @@
+bitfield Reg[4]
+
+bitfield Opcode[8] {
+	imm[1]
+	op[7]
+}
+
+register r0[32] = Reg{0}
+register r1[32] = Reg{1}
+register r2[32] = Reg{2}
+register r3[32] = Reg{3}
+register r4[32] = Reg{4}
+register r5[32] = Reg{5}
+register r6[32] = Reg{6}
+register r7[32] = Reg{7}
+
+# Internal rules to avoid errors.
+set INSTRUCTION_MAX_SIZE = 16;
+set INSTRUCTION_MIN_SIZE = 16;
+
+# Assembly example: mov r1, r2
+inst mov[16](arg1: register[32], arg2: register[32]) {
+	opcode = Opcode {
+		imm = 0b0,
+		op = 0x00,
+	}, # It's equivalent to: Opcode{0}
+	reg1 = Reg{arg1},
+	reg2 = Reg{arg2},
+}
