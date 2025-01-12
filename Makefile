@@ -8,7 +8,7 @@ FLAGS = --fail-if-warnings --toc --citeproc --highlight-style breezedark
 PDF_FILTERS = $(shell find . -ipath './src/filters/pdf/*.lua' -exec echo --lua-filter {} \;)
 HTML_FILTERS = $(shell find . -ipath './src/filters/html/*.lua' -exec echo --lua-filter {} \;)
 
-HTML_FLAGS = -t chunkedhtml --split-level=3
+HTML_FLAGS = -t chunkedhtml --split-level=2
 HTML_FLAGS += $(shell [ -f src/template.html ] && echo -n '--template=src/template.html')
 
 IMAGE_TAG=freedevorg/mya-spec
