@@ -24,14 +24,11 @@ jobs:
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Render PDF
-        run: make docker ARGS=pdf
-
       - name: Render HTML
         run: make docker ARGS=html
 
-      - name: Move PDF to output directory
-        run: mv *.pdf output/
+      - name: Render PDF
+        run: make docker ARGS="OUTPUT_PDF=output/mya-specification.pdf pdf"
 
       - name: Upload HTML output content
         uses: actions/upload-pages-artifact@v3
