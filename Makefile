@@ -16,7 +16,7 @@ IMAGE_TAG=freedevorg/mya-spec
 
 .PHONY: build
 build:
-	pandoc $(FLAGS) $(EXTRAFLAGS) -o $(OUTPUT) $(INPUT)
+	pandoc $(FLAGS) $(EXTRAFLAGS) -o $(OUTPUT) $(shell ./tools/preprocessor.py $(INPUT))
 
 .PHONY: pdf
 pdf:
