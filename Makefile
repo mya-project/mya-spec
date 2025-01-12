@@ -30,7 +30,7 @@ html:
 
 .PHONY: docker
 docker:
-	docker run --rm -it -v $(shell pwd):/app $(IMAGE_TAG) $(ARGS)
+	docker run --rm -i -v $(shell pwd):/app $(IMAGE_TAG) $(ARGS)
 
 .PHONY: docker-build
 docker-build:
