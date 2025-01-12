@@ -1,3 +1,5 @@
+include "registers.mya";
+
 bitfield Reg[4]
 
 bitfield Opcode[8] {
