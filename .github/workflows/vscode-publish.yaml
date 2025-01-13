@@ -10,6 +10,9 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: syntax-highlight/vscode
 
     steps:
       - name: Checkout code
@@ -23,12 +26,19 @@ jobs:
       - name: Install VSCE
         run: npm install -g @vscode/vsce
 
+      - name: Check if version exists
+        id: version_check
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          PUBLISHED=$(npx vsce show freedev.mya-syntax | grep -qE "Version:\s+$VERSION" && echo "true" || echo "false")
+          echo "version_exists=$PUBLISHED" >> $GITHUB_ENV
+
       - name: Build VSCode package
-        working-directory: syntax-highlight/vscode
+        if: env.version_exists == 'false'
         run: vsce package
 
       - name: Publish to Visual Studio Marketplace
-        working-directory: syntax-highlight/vscode
+        if: env.version_exists == 'false'
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
         run: vsce publish
