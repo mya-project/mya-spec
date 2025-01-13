@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - main
+    paths:
+      - "syntax-highlight/vscode/**"
+  workflow_dispatch:
 
 jobs:
   publish:
@@ -20,7 +23,12 @@ jobs:
       - name: Install VSCE
         run: npm install -g @vscode/vsce
 
+      - name: Build VSCode package
+        working-directory: syntax-highlight/vscode
+        run: vsce package
+
       - name: Publish to Visual Studio Marketplace
+        working-directory: syntax-highlight/vscode
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
         run: vsce publish
