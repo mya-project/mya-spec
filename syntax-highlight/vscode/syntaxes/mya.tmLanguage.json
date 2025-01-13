@@ -1,0 +1,37 @@
+{
+    "scopeName": "source.mya",
+    "patterns": [
+        {
+            "name": "keyword.declaration.mya",
+            "match": "\\b(bitfield|register|inst|set|include)\\b"
+        },
+        {
+            "name": "keyword.operator.mya",
+            "match": "=|\\{|\\}|\\[|\\]|\\(|\\)|;|,|\\.|\\||&|\\^|~|\\+|\\-|\\*|/|<<|>>"
+        },
+        {
+            "name": "constant.numeric.mya",
+            "match": "\\b0x[0-9a-fA-F]+|0o[0-7]+|0b[01]+|\\b\\d+\\b"
+        },
+        {
+            "name": "string.quoted.double.mya",
+            "match": "\"[^\"]*\""
+        },
+        {
+            "name": "variable.name.mya",
+            "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b"
+        },
+        {
+            "name": "type.specification.mya",
+            "match": "\\b(register|immediate)\\b"
+        },
+        {
+            "name": "comment.line.hash.mya",
+            "match": "#.*$"
+        }
+    ],
+    "fileTypes": [
+        "mya"
+    ],
+    "uuid": "f9519d37-2081-4058-984c-dd8e7a1ad29e"
+}

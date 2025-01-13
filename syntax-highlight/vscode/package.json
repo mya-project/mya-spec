@@ -1,0 +1,45 @@
+{
+    "name": "mya-syntax",
+    "displayName": "Mya Syntax",
+    "description": "Syntax highlighting for Mya language",
+    "version": "0.1.0",
+    "publisher": "freedev",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mya-project/mya-spec.git",
+        "directory": "syntax-highlight/vscode"
+    },
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "mya",
+                "aliases": [
+                    "Mya",
+                    "mya"
+                ],
+                "extensions": [
+                    ".mya"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "mya",
+                "scopeName": "source.mya",
+                "path": "./syntaxes/mya.tmLanguage.json"
+            }
+        ]
+    },
+    "scripts": {
+        "build": "vsce package",
+        "install": "code --install-extension *.vsix",
+        "publish": "vsce publish"
+    }
+}
