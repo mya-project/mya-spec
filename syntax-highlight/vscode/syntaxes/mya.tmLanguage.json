@@ -3,7 +3,7 @@
     "patterns": [
         {
             "name": "keyword.declaration.mya",
-            "match": "\\b(bitfield|register|inst|set|include)\\b"
+            "match": "\\b(bitfield|register|immediate|inst|set|include)\\b"
         },
         {
             "name": "keyword.operator.mya",
@@ -20,10 +20,6 @@
         {
             "name": "variable.name.mya",
             "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b"
-        },
-        {
-            "name": "type.specification.mya",
-            "match": "\\b(register|immediate)\\b"
         },
         {
             "name": "comment.line.hash.mya",

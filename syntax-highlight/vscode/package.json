@@ -2,7 +2,7 @@
     "name": "mya-syntax",
     "displayName": "Mya Syntax",
     "description": "Syntax highlighting for Mya language",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "publisher": "freedev",
     "repository": {
         "type": "git",
