@@ -1,4 +1,4 @@
-" Prevenir execução duplicada
+" Prevent duplicate execution
 if exists("b:current_syntax")
     finish
 endif

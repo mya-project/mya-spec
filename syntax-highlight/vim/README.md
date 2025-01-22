@@ -1,79 +1,79 @@
-### **Como instalar a syntax-highlight do Mya no Vim (Windows e Linux)**
+### **How to Install Mya Syntax Highlighting in Vim (Windows and Linux)**
 
 ------------------------------------------------------------------------
 
 #### **Windows**
 
-1. **MakeFile** 
-   - Você pode usar o makefile, mas você tem que editar para os caminhos corretos:
-   `make install_windows`
+1. **MakeFile**  
+   - You can use the Makefile, but you need to edit it for the correct paths:  
+     `make install_windows`
 
-**Ou:**
+**Or:**
 
-1. **Localize a instalação do Vim**  
-   - Normalmente elas devem estar aqui:  
-     `C:\Program Files\Vim`.
-   - Caso você tenha colocado a instalação do Vim em outro lugar, abra esse lugar e siga a instalação normalmente.
+1. **Locate the Vim Installation**  
+   - Typically, it is found here:  
+     `C:\Program Files\Vim`.  
+   - If you installed Vim in a different location, navigate there and proceed with the installation as described.
 
-2. **Atualize o arquivo `_vimrc`**  
-   - Abra o arquivo `_vimrc` em `C:\Program Files\Vim\_vimrc` com um editor de texto com permissões de administrador.  
-     (Clique com o botão direito > "Executar como administrador").  
-   - Copie o conteúdo do arquivo `_vimrc` do repositório do projeto e cole no final deste arquivo.
+2. **Update the `_vimrc` File**  
+   - Open the `_vimrc` file located at `C:\Program Files\Vim\_vimrc` with a text editor with administrator permissions.  
+     (Right-click > "Run as Administrator").  
+   - Copy the contents of the `_vimrc` file from the project repository and append them to the end of this file.
 
-3. **Adicione os arquivos de sintaxe e detecção de tipo**  
-   - Acesse as pastas apropriadas dentro de `C:\Program Files\Vim`.  
-   - **Para o arquivo de sintaxe (`mya.vim`)**:  
-     - Copie o arquivo `mya.vim` da pasta `syntax` do projeto para:  
-       `C:\Program Files\Vim\vim91\syntax\`.
-     - Se a pasta `syntax` não existir, crie-a.    
-   - **Para o arquivo de detecção de tipo (`mya.vim`)**:  
-     - Copie o arquivo `mya.vim` da pasta `ftdetect` do projeto para:  
+3. **Add Syntax and File Type Detection Files**  
+   - Navigate to the appropriate directories within `C:\Program Files\Vim`.  
+   - **For the syntax file (`mya.vim`)**:  
+     - Copy the `mya.vim` file from the project's `syntax` folder to:  
+       `C:\Program Files\Vim\vim91\syntax\`.  
+     - If the `syntax` folder does not exist, create it.  
+   - **For the file type detection file (`mya.vim`)**:  
+     - Copy the `mya.vim` file from the project's `ftdetect` folder to:  
        `C:\Program Files\Vim\vim91\ftdetect\`.  
-     - Se a pasta `ftdetect` não existir, crie-a.  
+     - If the `ftdetect` folder does not exist, create it.  
 
-4. **Teste a configuração**  
-   - Abra o Vim e edite um arquivo com extensão `.mya`. O tipo de arquivo e o realce de sintaxe devem ser ativados automaticamente.  
+4. **Test the Configuration**  
+   - Open Vim and edit a file with the `.mya` extension. The file type and syntax highlighting should activate automatically.  
 
 ------------------------------------------------------------------------
 
 #### **Linux**
 
-1. **MakeFile** 
-   - Você pode usar o makefile, mas você tem que editar para os caminhos corretos:
-   `make install_linux`
+1. **MakeFile**  
+   - You can use the Makefile, but you need to edit it for the correct paths:  
+     `Make install_linux`
 
-**Ou**
+**Or**
 
-1. **Localize a pasta de configuração do Vim**  
-   - As configurações do Vim no Linux geralmente ficam em:  
-     - Para um único usuário: `~/.vim`.  
-     - Para todos os usuários: `/usr/share/vim/vimfiles`.
+1. **Locate the Vim Configuration Directory**  
+   - Vim configuration files on Linux are usually found in:  
+     - For a single user: `~/.vim`.  
+     - For all users: `/usr/share/vim/vimfiles`.
 
-2. **Atualize o arquivo `.vimrc`**  
-   - Abra ou edite o arquivo `.vimrc` do usuário:  
-     ```bash
+2. **Update the `.vimrc` File**  
+   - Open or edit the user's `.vimrc` file:  
+     ```
      nano ~/.vimrc
-     ```
-   - Copie o conteúdo do arquivo `_vimrc` do repositório do projeto e cole no final.  
+     ```  
+   - Copy the contents of the `_vimrc` file from the project repository and append them to the end.  
 
-3. **Adicione os arquivos de sintaxe e detecção de tipo**  
-   - Crie as pastas se ainda não existirem:  
-     ```bash
+3. **Add Syntax and File Type Detection Files**  
+   - Create the directories if they do not already exist:  
+     ```
      mkdir -p ~/.vim/syntax ~/.vim/ftdetect
-     ```
-   - Copie os arquivos para as pastas:  
-     - **Arquivo de sintaxe (`mya.vim`)**:  
-       ```bash
+     ```  
+   - Copy the files to the appropriate directories:  
+     - **Syntax file (`mya.vim`)**:  
+       ```
        cp path/to/project/syntax/mya.vim ~/.vim/syntax/
+       ```  
+     - **File type detection file (`mya.vim`)**:  
        ```
-     - **Arquivo de detecção de tipo (`mya.vim`)**:  
-       ```bash
        cp path/to/project/ftdetect/mya.vim ~/.vim/ftdetect/
-       ```
+       ```  
 
-4. **Teste a configuração**  
-   - Abra o Vim e edite um arquivo com extensão `.mya`:  
-     ```bash
-     vim example.mya
+4. **Test the Configuration**  
+   - Open Vim and edit a file with the `.mya` extension:  
      ```
-   - Verifique se o tipo de arquivo foi detectado e o realce de sintaxe está funcionando.
+     vim example.mya
+     ```  
+   - Check if the file type is detected and syntax highlighting is working.  
