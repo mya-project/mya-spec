@@ -1,0 +1,15 @@
+" Put this in the final lines of the file.
+
+:syntax on
+autocmd BufRead,BufNewFile *.mya set filetype=mya
+
+augroup MyaHighlight
+  autocmd!
+  autocmd FileType mya highlight MyaDeclaration guifg=#569CD6 ctermfg=Blue
+  autocmd FileType mya highlight MyaOperator guifg=#D4D4D4 ctermfg=White
+  autocmd FileType mya highlight MyaNumber guifg=#B5CEA8 ctermfg=Cyan
+  autocmd FileType mya highlight MyaString guifg=#FF00FF ctermfg=Magenta
+  autocmd FileType mya highlight MyaVariable guifg=#DCDCAA ctermfg=Yellow
+  autocmd FileType mya highlight MyaComment guifg=#6A9955 ctermfg=Green
+augroup END
+
