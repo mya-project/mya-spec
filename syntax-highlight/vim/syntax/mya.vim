@@ -1,4 +1,4 @@
-" Key words
+" Keywords
 syntax keyword MyaDeclaration bitfield register immediate inst set include
 
 " Operators

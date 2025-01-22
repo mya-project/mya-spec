@@ -40,7 +40,7 @@
 
 1. **MakeFile**  
    - You can use the Makefile, but you need to edit it for the correct paths:  
-     `Make install_linux`
+     `make install_linux`
 
 **Or**
 
