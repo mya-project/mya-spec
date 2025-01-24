@@ -15,6 +15,11 @@ Mya you can specify registers and the format of instructions in assembly and in 
 * Tools can parse and make something with your ISA specification, for instance, generate an
   assembler and disassembler for you (coming soon...).
 
+## Repositories
+
+- [libmya](https://github.com/mya-project/libmya): A library to parse Mya language.
+- coming soon: A command-line tool to generate assembler and disassembler reading a specification written in Mya language.
+
 ## Specification
 
 You can read the specification in HTML or PDF, using the links below:
