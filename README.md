@@ -24,8 +24,8 @@ Mya you can specify registers and the format of instructions in assembly and in 
 
 You can read the specification in HTML or PDF, using the links below:
 
-* <https://mya.freedev.com.br/>
-* <https://mya.freedev.com.br/mya-specification.pdf>
+* <https://spec.myaproject.org/>
+* <https://spec.myaproject.org/mya-specification.pdf>
 
 ## How to build the specification
 
